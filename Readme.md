@@ -1,6 +1,6 @@
 # Dotnet Core WebRTC Video Call
 ## Requirments:
-- dotnet 6 sdk (for build)
+- dotnet 8.0 sdk (for build)
 
 build:
 ```powershell
