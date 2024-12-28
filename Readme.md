@@ -27,4 +27,4 @@ trust certificate:
 dotnet dev-certs https --trust
 ```
 
-**Author:** [Ali Khadivi](https://github.com/AliKhadivi/)
+**Author:** [Rasel kabir]
