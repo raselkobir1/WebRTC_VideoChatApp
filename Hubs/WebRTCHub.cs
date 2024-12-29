@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.SignalR;
-//using Newtonsoft.Json;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -91,7 +89,6 @@ namespace webrtc_dotnetcore.Hubs
                            Button = "<button class=\"joinButton\">Join!</button>"
                        };
             var data = JsonSerializer.Serialize(list);
-            //var data = JsonConvert.SerializeObject(list);
 
             if (notifyOnlyCaller)
             {
@@ -104,15 +101,9 @@ namespace webrtc_dotnetcore.Hubs
         }
     }
 
-    /// <summary>
-    /// Room management for WebRTCHub
-    /// </summary>
     public class RoomManager
     {
         private int nextRoomId;
-        /// <summary>
-        /// Room List (key:RoomId)
-        /// </summary>
         private ConcurrentDictionary<int, RoomInfo> rooms;
 
         public RoomManager()
@@ -125,7 +116,6 @@ namespace webrtc_dotnetcore.Hubs
         {
             rooms.TryRemove(nextRoomId, out _);
 
-            //create new room info
             var roomInfo = new RoomInfo
             {
                 RoomId = nextRoomId.ToString(),
